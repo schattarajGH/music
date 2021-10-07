@@ -1,0 +1,157 @@
+@@include('./components/header/header.html', {"title": "Music"})
+<!-- @@include('./components/nav/nav.html') -->
+
+@@include('./components/sidebar/sidebar.html')
+<div class="bg-image">
+    <img src="assets/images/home-3-background-img-4.jpg" alt="">
+</div>
+<div class="top-bar">
+    <div class="search-area">
+        <input type="search" placeholder="Search Songs">
+        <button><i data-feather="search"></i></button>
+    </div>
+    <div class="cta">
+        <a href="#">Sign Up/Login</a>
+    </div>
+</div>
+<div class="main-content">
+  <div class="inner">
+    <div class="languages">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">All</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Hindi</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Bengali</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#english" role="tab" aria-controls="contact" aria-selected="false">English</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#tamil" role="tab" aria-controls="contact" aria-selected="false">Tamil</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#bhojpuri" role="tab" aria-controls="contact" aria-selected="false">bhojpuri</a>
+              </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+              <div class="card-area">
+                <h3>Popular Artist</h3>
+                <div class="owl-carousel owl-theme artists">
+                  <div class="item">
+                    <a href="#">
+                    <div class="card">
+                      <img src="assets/images/one.png" alt="">
+                      <h4>Drake</h4>
+                    </div>
+                  </a>
+                  </div>
+                  <div class="item">
+                    <a href="#">
+                    <div class="card">
+                      <img src="assets/images/two.png" alt="">
+                      <h4>Drake</h4>
+                    </div>
+                  </a>
+                  </div>
+                  <div class="item">
+                    <a href="#">
+                    <div class="card">
+                      <img src="assets/images/three.png" alt="">
+                      <h4>Drake</h4>
+                    </div>
+                  </a>
+                  </div>
+                  <div class="item">
+                    <a href="#">
+                    <div class="card">
+                      <img src="assets/images/four.png" alt="">
+                      <h4>Drake</h4>
+                    </div>
+                  </a>
+                  </div>
+                  </div>
+              </div>
+              <div class="card-area">
+                <h3>Trending Songs</h3>
+                <div class="owl-carousel owl-theme trending">
+                  <div class="item">
+                    <a href="#">
+                    <div class="card">
+                      <img src="assets/images/five.png" alt="">
+                      <h4>50 Songs</h4>
+                    </div>
+                  </a>
+                  </div>
+                  <div class="item">
+                    <a href="#">
+                    <div class="card">
+                      <img src="assets/images/six.png" alt="">
+                      <h4>51 Songs</h4>
+                    </div>
+                  </a>
+                  </div>
+                  <div class="item">
+                    <a href="#">
+                    <div class="card">
+                      <img src="assets/images/seven.png" alt="">
+                      <h4>52 Songs</h4>
+                    </div>
+                  </a>
+                  </div>
+                  <div class="item">
+                    <a href="#">
+                    <div class="card">
+                      <img src="assets/images/eight.png" alt="">
+                      <h4>53 Songs</h4>
+                    </div>
+                  </a>
+                  </div>
+                  </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+        
+          </div>
+    </div>
+  </div>
+</div>
+<div class="player">        
+      <div class="flex">
+          <div class="left">
+              <div class="image">
+                  <img src="assets/images/singer.png" alt="">
+              </div>
+              <div class="info" id="info">
+                  <h4>Scars to your beautiful</h4>
+                  <p>Alessia Cara</p>
+              </div>
+            
+          </div>
+          <div class="middle">
+            <div class="tracks">
+              <svg width="28" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect y="14" width="4" height="18" rx="2" fill="#fff"/><rect x="6" width="4" height="32" rx="2" fill="#fff"/><rect x="12" y="8" width="4" height="24" rx="2" fill="#fff"/><rect x="18" y="13" width="4" height="19" rx="2" fill="#fff"/><rect x="24" y="8" width="4" height="24" rx="2" fill="#fff"/></svg>
+            </div>
+          </div>
+          <div class="right">
+            <div class="controls">
+              <i data-feather="fast-forward" class="fast-backward"></i>
+              <div class="circle">
+                <i data-feather="play"></i>
+              </div>
+              <i data-feather="fast-forward"></i>              
+            </div>
+          </div>
+      </div>
+     
+  
+  <audio src="assets/songs/62645337_128.mp3" id="audio" allow="autoplay"></audio>
+  
+</div>
+@@include('./components/favourite/favourite.html')
+@@include('./components/footerscript/footerscript.html')

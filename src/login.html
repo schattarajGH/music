@@ -1,0 +1,71 @@
+@@include('./components/header/header.html', {"title": "Music : Login"})
+<div class="login-page">
+    <div class="bg-image">
+        <img src="assets/images/home-3-background-img-4.jpg" alt="">
+    </div>
+    <div class="content">
+        <div class="login active">
+            <h3>Login</h3>
+            <div class="form">
+                <div class="bottom-left"></div>
+                <div class="bottom-right"></div>
+                <form>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="company@mail.com">
+                      <i data-feather="mail"></i>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="***********">
+                      <i data-feather="key"></i>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                  </form>
+    <span>Or</span>
+                  <div class="cta">
+                    <p>Don't have an account ? </p><a href="#" onclick="form('register')">Create account</a>
+                  </div>
+            </div>
+        </div>
+        
+<div class="register">
+    <h3>Create your account</h3>
+    <div class="form">
+           
+        <div class="bottom-left"></div>
+        <div class="bottom-right"></div>
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Full Name</label>
+                <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Jhone Deo">
+                <i data-feather="user"></i>
+              </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="company@mail.com">
+              <i data-feather="mail"></i>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="***********">
+              <i data-feather="key"></i>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Confirm Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="***********">
+                <i data-feather="lock"></i>
+              </div>
+            <button type="submit" class="btn">Register</button>
+          </form>
+<span>Or</span>
+          <div class="cta">
+            <p>I already have an account ? </p><a href="#" onclick="form('login')">Login</a>
+          </div>
+    </div>
+</div>
+    
+     
+    </div>
+</div>
+@@include('./components/footerscript/footerscript.html')

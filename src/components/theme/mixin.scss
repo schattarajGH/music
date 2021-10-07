@@ -1,0 +1,17 @@
+//primary gradient
+@mixin primary-linear-gradient() {
+  background: $primary;
+  background: linear-gradient(to right, $primary 0%,$primarydark 100%);
+}
+@mixin overlay($w:100%,$h:auto,$l:0,$r:auto,$t:0,$b:auto,$bg:#000,$op:0.4) {
+  content: "";
+  position: absolute;
+  width: $w;
+  height: $h;
+  left:$l;
+  right:$r;
+  top:$t;
+  bottom: $b;
+  background-color: $bg;
+  opacity: $op;
+}

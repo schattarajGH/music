@@ -1,0 +1,241 @@
+//Please import All plugins in plugins.scss file
+@import "./plugins";
+
+*{
+  font-family: 'Nunito Sans', sans-serif;
+}
+body{
+  // background-image:url(../../assets/images/home-3-background-img-4.jpg) ;
+  background-size: cover;
+}
+.bg-image{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  img{
+    width: 100%;
+    height: 100%;
+  }
+  // &::after{
+  //   @include  overlay($w:calc(100% - 470px),$h:100%,$l:50%,$r:auto,$t:0,$b:auto,$bg:#000,$op:0.4);
+  //   z-index: 0;
+  //   transform: translateX(-50%);
+  //   }
+}
+
+.top-bar{
+  position: relative;
+  padding: 20px 20px;
+  left:200px;
+  width: calc(100% - 500px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .search-area{
+    display: flex;
+    height: 50px;
+    align-items: center;
+    background-color: #fff;
+    width: 50%;
+    border-radius: 50px;
+    overflow: hidden;
+    z-index: 1;
+    input{
+      height: 100%;
+      flex:1;
+      background-color: transparent;
+      border:none;
+      padding:0 20px;
+      &:focus{
+        outline: none;
+      }
+    }
+    button{
+      height: 100%;
+      border:none;
+      background-color: transparent;
+      padding:0 16px;
+    }
+
+  }
+  .cta{
+    a{
+      background-color: $dark;
+      border-radius: 20px;
+      padding:12px 20px;
+      color: $white;
+      font-size: 15px;
+      text-decoration: none;
+    }
+    position: relative;
+    z-index: 1;
+  }
+   &::after{
+    @include  overlay($w:100%,$h:100%,$l:0,$r:auto,$t:0,$b:auto,$bg:#000,$op:0.4);
+    z-index: 0;
+    }
+}
+.main-content{
+  width: calc(100% - 500px);
+  left:200px;
+  position: relative;
+  height: calc(100vh - 90px);
+  padding: 0 10px;
+  overflow: hidden;
+  //temporary
+  .inner{
+    position: relative;
+    z-index: 1;
+  overflow-y:auto;
+  max-height: 90vh;
+
+    .card-area{
+      margin-top: 30px;
+      color: $white;
+      padding: 0 16px;
+      h3{
+        margin-bottom: 16px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .owl-carousel{
+        a{
+          text-decoration: none;
+          color: $white;
+        }
+        .card{
+          border-radius: 12px;
+          img{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto;
+          }
+          background-color: rgba(196, 196, 196, 0.16);
+          border:none;
+          padding: 10px 8px;
+          text-align: center;
+          h4{
+            font-size: 16px;
+            margin: 16px 0;
+          }
+        }
+        &.trending{
+          .card{
+            background-color: transparent;
+          text-align: left;
+            img{
+              border-radius: 20px;
+              width: 100%;
+              height: 147px;
+              object-fit: cover;
+            }
+            h4{
+              padding-left: 10px;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .nav{
+      border-radius:20px;
+      backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.1); 
+    padding: 0 10px; 
+      &.nav-tabs{border:none;}
+      .nav-item{
+        .nav-link{
+          color: $white;
+     padding: 12px 0;
+     margin:0 24px;
+     text-transform: capitalize;
+     &:hover{
+       border-color: transparent transparent $yellow transparent;
+     }
+        }
+        .active{
+          background-color:transparent;
+          border-color: transparent;
+          border-bottom: 2px solid $yellow;
+        }
+       
+      }
+    }
+    &::after{
+      @include  overlay($w:100%,$h:100%,$l:0,$r:auto,$t:0,$b:auto,$bg:#000,$op:0.4);
+      z-index: 0;
+      }
+}
+.player{
+  padding: 10px 20px;
+  position: fixed;
+  bottom: 0;
+  left:0;
+  width: 100%;
+  min-height: 60px;
+  background-color: $dark;
+  z-index: 2;
+  .flex{
+    height: fit-content;
+    display: flex;
+    color: $white;
+    justify-content: space-between;
+    align-items: center;
+    .left{
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    .info{
+      margin-left: 16px;
+      h4{
+        font-size: 14px;
+        font-weight: bold;
+        margin: 0;
+      }
+      p{margin: 0;
+      font-size: 12px;
+      color: $pink;
+      }
+    }
+    .image{
+      height:fit-content;
+      img{
+        width:60px;
+        height:100%;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+    }
+  }
+  .right{
+    .controls{
+      display: flex;
+      align-items: center;
+      .feather{
+        fill:$white;
+      }
+      .circle{
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $white;
+        margin: 0 12px;
+      .feather-play{
+        fill:$pink;
+        stroke: $pink;
+      }
+         }
+         .fast-backward{
+          transform: rotate(180deg);
+        }
+    }
+  }
+  }
+}
